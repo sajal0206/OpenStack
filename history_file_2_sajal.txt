@@ -1,0 +1,63 @@
+    1  sudo snap install microstack --beta --devmode
+    2  sudo microstack init --auto --control
+    3  init 0
+    4  sudo init 0
+    5  sudo apt update
+    6  sudo apt install cokpit -y
+    7  sudo apt install cockpit -y
+    8  sudo systemctl start cockpit
+    9  sudo systemctl enable cockpit
+   10  sudo systemctl status cockpit
+   11  ss -tunlp | grep 909
+   12  sudo ufw allow 9090/tc
+   13  sudo ufw allow 9090/tcp
+   14  sudo passwd ubuntu
+   15  sudo init 0
+   16  sudo snap get microstack config.credentials.keystone-password
+   17  vim sajalkey.pem
+   18  ssh -i sajalkey.pem cirros@192.168.222.50
+   19  ping 192.168.222.50
+   20  vim .bashrc 
+   21  openstack
+   22  sudo -i
+   23  vim .bashrc 
+   24  sudo -i
+   25  ssh -i sajalkey.pem cirros@10.20.20.231
+   26  chmod 400 sajalkey.pem 
+   27  ssh -i sajalkey.pem cirros@10.20.20.231
+   28  ping 192.168.222.170
+   29  ssh -i sajalkey.pem cirros@10.20.20.231
+   30  clear
+   31  ping 10.20.20.112
+   32  vim .bashrc 
+   33  source .bashrc
+   34  openstack project list
+   35  vim .bashrc 
+   36  source .bashrc
+   37  sudo -i
+   38  vim test-java-key.pem
+   39  chmod 400 test-java-key.pem 
+   40  ping 192.168.0.157
+   41  snap get microstack config.credentials.keystone-password
+   42  sudo snap get microstack config.credentials.keystone-password
+   43  rm test-java-key.pem 
+   44  ls
+   45  rm test-java-key.pem 
+   46  ls
+   47  sudo -i
+   48  history
+   49  sudo -i
+   50  history 
+   51  sudo -i
+   52  sudo  -i
+   53  historu
+   54  history
+   55  sudo -i
+   56  microstack.openstack server list
+   57  sudo -1
+   58  sudo -i
+   59  ssh -i sajalkey.pem cirros@10.20.20.179
+   60  sudo init 0
+   61  sudo -i
+   62  ls
+   63  history > history_file_2_sajal.txt

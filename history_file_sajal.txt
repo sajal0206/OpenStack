@@ -1,0 +1,243 @@
+    1  vim .bashrc 
+    2  openstack list
+    3  source .bashrc 
+    4  openstack
+    5  exit
+    6  vim .bash
+    7  vim .bashrc 
+    8  source .bashrc 
+    9  openstack 
+   10  ping 192.168.222.50
+   11  ssh 192.168.222.50
+   12  ping 10.20.20.231
+   13  exit
+   14  openstack project list
+   15  openstack project
+   16  openstack project create
+   17  openstack project create --domain default --description 'for java testig purpose' java-testing
+   18  openstack project create --domain default --description 'for_java_testig_purpose' java-testing
+   19  openstack projeect list
+   20  openstack project list
+   21  openstack project java-testing
+   22  openstack project show java-testing
+   23  openstack user add
+   24  openstack user create
+   25  openstack user create --project java-testing --email 'test@java.com' --domain default --password-prompt test
+   26  openstack role
+   27  openstack role add
+   28  openstack role list
+   29  openstack role add --project java-test --domain default --user test member
+   30  openstack role add --project java-test --domain default --user test admin
+   31  openstack role add --project java-test --user test admin
+   32  openstack role add --project java-testing --user test admin
+   33  init 0
+   34  openstack network list
+   35  openstack subnet list
+   36  openstack subnet show net-java
+   37  openstack subnet show net-java |more
+   38  openstack network create java-test-2
+   39  openstack subnet create monitor-java --network java-test-2 --subnet-range 10.0.3.0/24 --project test-java
+   40  openstack project list
+   41  openstack subnet create monitor-java --network java-test-2 --subnet-range 10.0.3.0/24 --project java-testing
+   42  openstack server create
+   43  openstack server create 2ndVM
+   44  openstack server create --flavor m1.tiny 2ndVM
+   45  openstack server create --flavor m1.tiny --image cirros 2ndVM
+   46  microstack launch cirros -n sajalvm3
+   47  openstack server 
+   48  openstack server list
+   49  openstack server stop sajalvm3
+   50  openstack server list
+   51  openstack server
+   52  openstack server create
+   53  openstack server create --flavor m1.tiny --description 'sajal_vm_with_cli_using_server' --key-name /home/ubuntu/sajalkey.pem --image cirros sampleVmWithServer
+   54  openstack server create --flavor m1.tiny --key-name /home/ubuntu/sajalkey.pem --image cirros sampleVmWithServer
+   55  openstack server list
+   56  openstack server create --flavor m1.tiny --key-name /home/ubuntu/sajalkey.pem --image cirros  -nic net-id=test sampleVmWithServer
+   57  openstack server create --flavor m1.tiny --key-name /home/ubuntu/sajalkey.pem --image cirros  --nic net-id=test sampleVmWithServer
+   58  openstack server create --flavor m1.tiny --key-name sajalkey2.pem --image cirros  --nic net-id=test sampleVmWithServer
+   59  openstack server create --flavor m1.tiny --key-name sajalkey2 --image cirros  --nic net-id=test sampleVmWithServer
+   60  openstack server create --flavor m1.tiny --image cirros  --nic net-id=test sampleVmWithServer
+   61  openstack server list
+   62  openstack server delete sampleVmWithServer
+   63  openstack server list
+   64  openstack flavor create 
+   65  openstack flavor create --ram 256mb --disk 1gb --vcpu 1 --description "smallest in all size" s1.tiny
+   66  openstack flavor create --ram 256-mb --disk 1-gb --vcpu 1 --description "smallest in all size" s1.tiny
+   67  hstory
+   68  history
+   69  exit
+   70  openstack flavor create --ram 256 --disk 1 --vcpu 1 --description "smallest in all size" s1.tiny
+   71  openstack flavor create --ram 256 --disk 1 --vcpu 1 --description "smallest_in_all_size" s1.tiny
+   72  openstack flavor list
+   73  openstack flavor create --ram 256 --disk 1 --vcpu 1 s1.tiny
+   74  openstack flavor list
+   75  init 0
+   76  openstack project list
+   77  openstack project set --name default admin
+   78  openstack project list
+   79  openstack project 
+   80  openstack project set
+   81  openstack project set --name admin admin
+   82  openstack project set --name admin default
+   83  openstack project list
+   84  snap get microstack config.credentials.keystone-password
+   85  openstack project set --name admin default
+   86  openstack project
+   87  openstack project show default
+   88  openstack project show java-testing
+   89  snap get microstack config.credentials.keystone-password
+   90  exit 
+   91  sudo microstack init --auto --control
+   92  snap get microstack config.credentials.keystone-password
+   93  openstack project list
+   94  openstack project show default
+   95  openstack project show admin
+   96  openstack project
+   97  openstack server list
+   98  openstack server create
+   99  openstack server create --image cirros --flavor default --nic net-id=java-testing java_machine_with_server
+  100  openstack flavor list
+  101  openstack server create --image cirros --flavor s1.tiny --nic net-id=java-testing java_machine_with_server
+  102  openstack netword list
+  103  openstack network list
+  104  openstack server create --image cirros --flavor s1.tiny --nic net-id=jva java_machine_with_server
+  105  openstack server list
+  106  history
+  107  exit
+  108  openstack baremetal node power on
+  109  snap get microstack config.credentials.keystone-password
+  110  openstack server add 
+  111  openstack server add floating
+  112  openstack server add floating ip
+  113  openstack server add floating ip --fixed-ip-address 10.0.0.2 java_machine_with_server 
+  114  openstack server add floating ip --fixed-ip-address 10.0.0.2 java_machine_with_server 192.168.0.219
+  115  openstack server add floating ip java_machine_with_server 10.0.02
+  116  openstack server add floating ip java_machine_with_server 10.0.0.2
+  117  openstack server add floating ip java_machine_with_server 192.168.0.219
+  118  openstack server 
+  119  openstack server set
+  120  openstack server add
+  121  openstack server add | grep key
+  122  openstack server add | grep ^key
+  123  openstack server add | grep ^key^
+  124  openstack server add
+  125  apt update
+  126  snap install docker
+  127  apt install docker
+  128  docker ps
+  129  docker --help
+  130  man docker
+  131  docker man
+  132  find / -iname docker
+  133  openstack network delete jc=va
+  134  openstack network delete jva
+  135  openstack subnet delete java-testing
+  136  openstack subnet list
+  137  openstack server list
+  138  openstack subnet list
+  139  openstack subnet delete monitor-java
+  140  openstack subnet delete net-java
+  141  openstack server delete java_machine_with_server
+  142  openstack subnet delete net-java
+  143  openstack network delete jva
+  144  openstack network delete java-test
+  145  openstack network list
+  146  openstack network delete java-test-2
+  147  openstack server list
+  148  openstack project list
+  149  openstack project delete java-testing
+  150  openstack project delete defaullt
+  151  openstack project delete default
+  152  openstack domain delte default
+  153  openstack domain delete default
+  154  openstack domain list
+  155  openstack project show server
+  156  openstack project show service
+  157  openstack project create project1
+  158  openstack project
+  159  openstack project set
+  160  openstack project set --description "project_1_with_cli" project1
+  161  openstack project list
+  162  openstack project add 
+  163  openstack project set --id 01 project1
+  164  openstack project 
+  165  openstack project set --domain default1 project1
+  166  openstack domain create 
+  167  openstack domain create --description 'domain_1_with_cli' domain1
+  168  openstack project set --domain default1 project1
+  169  openstack project set --domain domain1 project1
+  170  openstack project show project1
+  171  openstack user create 
+  172  openstack user create --project project1 --description "first_user_for_the_project_with_cli" user1
+  173  openstack user set 
+  174  openstack user set --project project1 --email "user1@example.com" --password-prompt
+  175  openstack user set --project project1 --email "user1@example.com" --password-prompt user1
+  176  hstory
+  177  history
+  178  openstack role create 
+  179  openstack role list
+  180  openstack role add
+  181  openstack role add --project project1 --user user1 admin
+  182  openstack user create user2 --description "user_2_with_cli" --project project1 
+  183  openstack user set 
+  184  openstack user set --password-prompt --email "user2@example.com"
+  185  openstack user set --password-prompt --email "user2@example.com" user2
+  186  openstack user create user3 --description "user_3_with_cli" --project project1 
+  187  openstack user set --password-prompt --email "user3@example.com" user3
+  188  openstack role add 
+  189  openstack role add --project project1 --user user2 member
+  190  openstack role add --project project1 --user user3 viewer
+  191  openstack role list
+  192  openstack role add --project project1 --user user3 reader
+  193  openstack user create user4 --description "user_4_with_cli" --project project1 
+  194  openstack user set --password-prompt --email "user4@example.com" user4
+  195  vim sajal
+  196  rename sajal sajal.pem
+  197  rename.ul sajal sajal.pem
+  198  mv sajal sajal.oem
+  199  mv sajal.oem sajal.pem
+  200  chmod 400 sajal.pem 
+  201  ssh -i sajal.pem cirros@10.20.20.229
+  202  ping 10.20.20.229
+  203  ssh -i sajal.pem cirros@10.20.20.229
+  204  openstack server stop user2VM
+  205  openstack server stop
+  206  openstack server 
+  207  openstack server reboot user2VM
+  208  openstack server list
+  209  openstack project list
+  210  openstack project show project1
+  211  history
+  212  openstack server create 
+  213  openstack server create --flavor s1.tiny --image cirros --nic net-id=test --key-name sajal.pem sajalVM1
+  214  openstack server create --flavor s1.tiny --image cirros --nic net-id=test --key-name saja sajalVM1
+  215  openstack server create --flavor s1.tiny --image cirros --nic net-id=test --key-name sajal sajalVM1
+  216  openstack server list
+  217  exit
+  218  openstack keypair list
+  219  openstack server create --flavor s1.tiny --image cirros --nic net-id=test --key-name sajalkey sajalVM1
+  220  openstack server list
+  221  ping 192.168.222.226
+  222  openstack floati
+  223  openstack floating ip create
+  224  openstack floating ip list
+  225  openstack floating ip create
+  226  openstack floating ip create --floating-ip-address 10.20.20.179 --fixed-ip-address 192.168.222.226
+  227  openstack floating ip list
+  228  openstack floating ip create --floating-ip-address 10.20.20.179 --fixed-ip-address 192.168.222.226 sajalVM1
+  229  openstack network list
+  230  openstack floating ip create --floating-ip-address 10.20.20.179 --fixed-ip-address 192.168.222.226 4dd8e571-be3f-4836-a45a-b1c4fd52778a
+  231  openstack port list
+  232  openstack floating ip create
+  233  openstack floating ip create --floating-ip-address 10.20.20.179 --fixed-ip-address 192.168.222.226 4dd8e571-be3f-4836-a45a-b1c4fd52778a --port a130fa7d-8200-464a-addf-bb6fdf3d7272
+  234  ping 10.20.20.179
+  235  exit
+  236  ls
+  237  wget https://download.fedoraproject.org/pub/fedora/linux/releases/35/Cloud/x86_64/images/Fedora-Cloud-Base-35-1.2.x86_64.qcow2
+  238  openstack image list
+  239  openstack image create
+  240  openstack image create --didk-format qcow2 --min-disk 1 --min-ram 1024 --file ./Fedora-Cloud-Base-35-1.2.x86_64.qcow2 fedoraOS
+  241  openstack image create --disk-format qcow2 --min-disk 1 --min-ram 1024 --file ./Fedora-Cloud-Base-35-1.2.x86_64.qcow2 fedoraOS
+  242  openstack image list
+  243  history > history_file_sajal.txt
