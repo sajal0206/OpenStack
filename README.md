@@ -1,2 +1,2 @@
 # OpenStack
-OpenStack commands history file
+OpenStack commands
