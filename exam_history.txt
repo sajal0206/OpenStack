@@ -1,0 +1,22 @@
+    1  snap install microstack --beta --devmode
+    2  snap install microstack --devmode --beta
+    3  exit
+    4  exut
+    5  exit
+    6  openstack service create
+    7  openstack server create
+    8  openstack server create --image cirros --key-name market_key --network marketing-net --flavor t2.micro --nic net-id=marketing-net t2
+    9  openstack favor list
+   10  openstack flavor list
+   11  openstack flavor list --project Marketing
+   12  openstack flavor list --private
+   13  openstack server create
+   14  openstack server create |grep private
+   15  openstack server create| grep private
+   16  openstack server create --image cirros --key-name market_key --network marketing-net --flavor t2.micro --private --nic net-id=marketing-net t2
+   17  openstack server create --image cirros --key-name market_key --network marketing-net --flavor dcf2d5f7-dc8a-4f98-a8d4-26ac79028dfd --nic net-id=marketing-net t2
+   18  openstack flavor list --private
+   19  openstack server delete t2
+   20  openstack server create --image cirros --key-name market_key --network marketing-net --flavor 75392bf9-2a1b-4abf-a06b-88a4b63725d7 --nic net-id=marketing-net t2
+   21  openstack server create --image cirros --key-name market_key --network marketing-net --flavor 4bf24404-a57c-4c8c-a7d1-cdf474c55d48 --nic net-id=marketing-net t2
+   22  history > exam_history.txt

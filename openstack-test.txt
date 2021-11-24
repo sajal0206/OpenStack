@@ -1,0 +1,96 @@
+aws creds
+url https://svvvlab.signin.aws.amazon.com/console
+username    openstack
+password    mqr8hH=G{HyIwEs 
+
+
+#1. Launch EC2 Instance
+#    region us-west1 ( California )
+#    AMI Ubuntu 20.04
+#    Instance Type t2.xlarge	
+#    Use exsiting keypair  openstack_key.pem
+#    Use exsiting security group name openstack
+
+#Install OpenStack yourself
+
+#At this time use devmode and the beta channel:
+sudo snap install microstack --devmode --beta
+
+#Information on the installed snap can be viewed like this:
+snap list microstack
+
+#Initialisation
+sudo microstack init --auto --control
+
+
+#Create an instance
+#MicroStack comes with a convenient instance creation command called microstack launch.
+#It uses the following defaults for its instances:
+#    keypair ‘microstack’    
+#    flavor ‘m1.tiny’
+#    floating IP address on subnet ‘10.20.20.0/24’
+
+microstack launch cirros -n test
+
+#Connect to the instance
+ssh -i /home/ubuntu/snap/microstack/common/.ssh/id_microstack cirros@10.20.20.199
+
+
+
+#Access the openstack cloud dashboard
+https://your-ec2-instance-public-ip 
+
+#The username is ‘admin’ and the password is obtained in this way:
+sudo snap get microstack config.credentials.keystone-password
+
+@Question
+Create projects with names project1, project2 in domains domain1, domain2 respectively. 
+Set description of project1 as "project_1_created_by_<write your name here>" and 
+set description of project2 as "project_2_created_by_<write your name here>". 
+Create users admin1, member1 and reader1 and associate these users with project1. 
+Also create users admin2, member2 and reader2 and associate these users with project2. 
+Create a password using password-prompt for all users as openstack.
+
+
+#create a domain "Ovirt"
+#create two projects in "Ovirt" Domain 
+    1. Marketing
+    2. Research
+#create 4 users in Ovirt Domain
+    developer1
+    developer2
+    sysadmin1
+    sysadmin2
+    
+# attach  member and reader role  to developer1 user in Marketing Project   
+# attach  member and reader role  to developer2 user in Research Project
+
+# attach admin role to sysadmin1 user in Marketing project
+# attach admin role to sysadmin2 user in Research project
+
+# Create 2 flavor in Marketing Group
+    Name t2.micro
+    vcpu 1
+    ram  1GiB
+    Disk 5GiB
+
+    Name t2.small
+    vcpu 1
+    ram  2GiB
+    Disk 5GiB
+
+# Create 2 flavor in Research Group
+    Name t3a.micro
+    vcpu 1
+    ram  2GiB
+    Disk 5GiB
+
+    Name t3a.small
+    vcpu 2
+    ram  2GiB
+    Disk 5GiB    
+
+# Create a network called marketing-net
+# add subnet range 192.168.140.0/24 in marketing-net ( other settings leave default )   
+# create keypair market_key.pem inside Marketing project 
+# Launch t2 t2.micro instance in marketing project
